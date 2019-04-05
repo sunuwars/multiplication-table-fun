@@ -1,20 +1,37 @@
 body{
-    background-color: green;
+    background-color:#F8F8F8;
 }
 
 #table-div {
     border: 1px solid red;
-    height:200px;
+    /* height:200px; */
     /* width: 100%; */
 }
+.table-heading{
+    text-align: center;
+}
 .table-ul {
-    border:1px solid black;
+    /* border:1px solid black; */
     list-style:none;
     padding-left: 0;
     display:flex;
+    justify-content: center;
 }
 .table-li{
     border:1px solid pink;
-    width:calc(100% / 10 - 2px);
-    height:60px;
+    width:calc(80% / 10 - 2px);
+    height:5vh;
 }
+
+.number-dot-btn-container{
+    display:flex;
+    justify-content: center;
+}
+
+.lot-times-number{
+    text-align: center;
+  }
+
+  .lot-times-number h3{
+      margin: .5em;
+  }  

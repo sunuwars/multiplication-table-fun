@@ -5,7 +5,7 @@ import emptyNumberBtn from "../images/empty-dots.svg";
 
 export default class NumberBtn extends React.Component{
     state = {
-        showNumber : true
+        showNumber : false
 
     }
     
@@ -26,7 +26,7 @@ export default class NumberBtn extends React.Component{
     render() {
         console.log('this.state.showNumber=',this.state.showNumber);
         return (
-            <div >
+            <div className="number-dot-btn-container">
                 <img src={this.state.showNumber ? numberBtn : emptyNumberBtn} onClick={this.toggle}></img>
 
             </div>
