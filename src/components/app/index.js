@@ -49,18 +49,30 @@ export default class App extends React.Component {
                 <ul className="table-ul" >
                     <li className="table-li lot-times-number"><h3>1 * 2</h3></li>
                     <li className="table-li" data-testid="firstRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
-                     <li className="table-li"><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
 
-                     <li className="table-li" data-testid="outputSumFirstRow" >{this.state.firstRowSum}</li>
-                    {/* <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li> */}
+                    <li className="table-li" data-testid="firstRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+
+                    <li className="table-li" data-testid="firstRowThirdBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+                    <li className="table-li" data-testid="firstRowFourthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+                    <li className="table-li" data-testid="firstRowFifthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+                    <li className="table-li" data-testid="firstRowSixthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+                    <li className="table-li" data-testid="firstRowSeventhBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+                    <li className="table-li" data-testid="firstRowEighthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+                    <li className="table-li" data-testid="firstRowNinthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+                    <li className="table-li" data-testid="firstRowTenthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+                    
+
+                    <li className="table-li" data-testid="outputSumFirstRow" >{this.state.firstRowSum}</li>
                 </ul>
+
                 <ul className="table-ul">
                     <li className="table-li lot-times-number"><h3>2 * 2</h3></li>
                     {/* <li className="table-li"><NumberBtn/></li>
