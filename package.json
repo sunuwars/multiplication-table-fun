@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest ",
     "dev": "parcel src/index.html",
     "build": "parcel buid src/index.html"
   },
@@ -30,7 +30,8 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-react": "^7.12.4",
     "jest": "^24.7.1",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "react-testing-library": "^6.1.2"
   },
   "dependencies": {
     "react": "^16.8.6",

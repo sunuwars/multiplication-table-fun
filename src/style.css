@@ -4,7 +4,6 @@ body{
 
 #table-div {
     border: 1px solid red;
-    /* height:200px; */
     /* width: 100%; */
 }
 .table-heading{
@@ -21,6 +20,8 @@ body{
     border:1px solid pink;
     width:calc(80% / 10 - 2px);
     height:5vh;
+    display:flex;
+    justify-content: center;
 }
 
 .number-dot-btn-container{

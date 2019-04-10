@@ -1,28 +1,69 @@
 import React from "react";
 import {render} from "react-dom";
-import NumberBtn from "./numberBtn"
+import NumberBtn from "../numberBtn"
 
 export default class App extends React.Component {
+    
+    state = {
+        totalNumber : 0,
+        firstRowSum : 0,
+        secondRowSum : 0,
+    }
+   
+    incrementNumberCount =() =>{ console.log('hello')
+        
+        this.setState( (prevState, props) => {
+            return {totalNumber : prevState.totalNumber + 2};
+        })
+    }
+
+    decrementNumberCount = () => { // console.log('decrement')
+        this.setState( (prevState, props) => {
+            return {totalNumber : prevState.totalNumber - 2};
+        })
+    }
+
+    incrementNumberCountFirstRow =() =>{ 
+        
+        this.setState( (prevState, props) => {
+            return {firstRowSum : prevState.firstRowSum + 2};
+        })
+    }
+
+    decrementNumberCountFirstRow = () => { 
+        this.setState( (prevState, props) => {
+            return {firstRowSum : prevState.firstRowSum - 2};
+        })
+    }
+
+    
+
     render() {
+        // console.log(  "this.state.totalNumber=" , this.state.totalNumber);
+        console.log(  "this.state.firstRowSum=" , this.state.firstRowSum);
+        console.log(  "this.state.secondRowSum=" , this.state.secondRowSum);
         return (
             <React.Fragment>
-                <h1 class="table-heading">Two's table</h1>
+                <h1 className="table-heading">Two's table</h1>
                 <div id="table-div">
-                <ul className="table-ul">
+                <ul className="table-ul" >
                     <li className="table-li lot-times-number"><h3>1 * 2</h3></li>
+                    <li className="table-li" data-testid="firstRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+                     <li className="table-li"><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
+
+                     <li className="table-li" data-testid="outputSumFirstRow" >{this.state.firstRowSum}</li>
+                    {/* <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
+                    <li className="table-li"><NumberBtn/></li> */}
                 </ul>
                 <ul className="table-ul">
                     <li className="table-li lot-times-number"><h3>2 * 2</h3></li>
+                    {/* <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
@@ -30,11 +71,9 @@ export default class App extends React.Component {
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li>
+                    <li className="table-li"><NumberBtn/></li> */}
                 </ul>
-                <ul className="table-ul">
+                {/* <ul className="table-ul">
                     <li className="table-li lot-times-number"><h3>3 * 2</h3></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
@@ -137,11 +176,10 @@ export default class App extends React.Component {
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
-                </ul>
+                </ul> */}
                 </div>
             </React.Fragment>
         )
     }
 }
 
-{/* <p>hello hello hello hello</p> */}
