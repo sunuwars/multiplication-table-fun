@@ -1,7 +1,9 @@
 
 import React from "react";
-import {fireEvent, render } from "react-testing-library";
+import {fireEvent, render, cleanup } from "react-testing-library";
 import App from "./index";
+
+// afterEach(cleanup);
 
 describe('multiplication table integration test works', ()=> {
     const {getByText, container, getByLabelText, getByTestId} = render(<App/>);

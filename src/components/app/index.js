@@ -1,13 +1,17 @@
 import React from "react";
 import {render} from "react-dom";
 import NumberBtn from "../numberBtn"
+import CorrectImg from "../../images/correct-img.svg";
+import IncorrectImg from "../../images/incorrect-img.svg";
 
 export default class App extends React.Component {
     
     state = {
         totalNumber : 0,
         firstRowSum : 0,
+        correctFirstRowSum : 2,
         secondRowSum : 0,
+        checkResult : false,
     }
    
     incrementNumberCount =() =>{ console.log('hello')
@@ -36,7 +40,11 @@ export default class App extends React.Component {
         })
     }
 
-    
+    checkResultFunc = () => {
+        this.setState( (prevState, props) => {
+            return {checkResult : !prevState.checkResult}
+        })
+    }
 
     render() {
         // console.log(  "this.state.totalNumber=" , this.state.totalNumber);
@@ -70,12 +78,15 @@ export default class App extends React.Component {
                     <li className="table-li" data-testid="firstRowTenthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumFirstRow" >{this.state.firstRowSum}</li>
+                    {/* <li className="table-li" data-testid="outputSumFirstRow" >{ this.state.checkResult ?this.state.firstRowSum : ""}</li> */}
+
+                    <li className="table-li" data-testid="outputSumFirstRow" >{ this.state.firstRowSum }</li>
+
+                    <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.firstRowSum == this.state.correctFirstRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
 
-                <ul className="table-ul">
+               {/*  <ul className="table-ul">
                     <li className="table-li lot-times-number"><h3>2 * 2</h3></li>
-                    {/* <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
@@ -83,8 +94,9 @@ export default class App extends React.Component {
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
                     <li className="table-li"><NumberBtn/></li>
-                    <li className="table-li"><NumberBtn/></li> */}
-                </ul>
+                    <li className="table-li"><NumberBtn/></li>
+                    <li className="table-li"><NumberBtn/></li> 
+                </ul>  */}
                 {/* <ul className="table-ul">
                     <li className="table-li lot-times-number"><h3>3 * 2</h3></li>
                     <li className="table-li"><NumberBtn/></li>
@@ -190,6 +202,7 @@ export default class App extends React.Component {
                     <li className="table-li"><NumberBtn/></li>
                 </ul> */}
                 </div>
+                <button onClick={this.checkResultFunc}>{this.state.checkResult ? "hide checking" : "check result" } </button>
             </React.Fragment>
         )
     }
