@@ -180,5 +180,125 @@ describe('multiplication table integration test works', ()=> {
         
     });
 
+    it('checks on clicking all ten number_buttons of THIRD row, the thirdRowSum increments/decrements if number-dot shown/not-shown ',  ()=> {
+        const thirdRowFirstBtnContainer = getByTestId("thirdRowFirstBtnContainer");
+        const toggleFirstDottedNumberBtn = thirdRowFirstBtnContainer.childNodes[0];
+
+        const thirdRowSecondBtnContainer = getByTestId("thirdRowSecondBtnContainer");
+        const toggleSecondDottedNumberBtn = thirdRowSecondBtnContainer.childNodes[0];
+
+        const thirdRowThirdBtnContainer = getByTestId("thirdRowThirdBtnContainer");
+        const toggleThirdDottedNumberBtn = thirdRowThirdBtnContainer.childNodes[0];
+        
+        const thirdRowFourthBtnContainer = getByTestId("thirdRowFourthBtnContainer");
+        const toggleFourthDottedNumberBtn = thirdRowFourthBtnContainer.childNodes[0];
+
+        const thirdRowFifthBtnContainer = getByTestId("thirdRowFifthBtnContainer");
+        const toggleFifthDottedNumberBtn = thirdRowFifthBtnContainer.childNodes[0];
+
+        const thirdRowSixthBtnContainer = getByTestId("thirdRowSixthBtnContainer");
+        const toggleSixthDottedNumberBtn = thirdRowSixthBtnContainer.childNodes[0];
+
+        const thirdRowSeventhBtnContainer = getByTestId("thirdRowSeventhBtnContainer");
+        const toggleSeventhDottedNumberBtn = thirdRowSeventhBtnContainer.childNodes[0];
+
+        const thirdRowEighthBtnContainer = getByTestId("thirdRowEighthBtnContainer");
+        const toggleEighthDottedNumberBtn = thirdRowEighthBtnContainer.childNodes[0];
+
+        const thirdRowNinthBtnContainer = getByTestId("thirdRowNinthBtnContainer");
+        const toggleNinthDottedNumberBtn = thirdRowNinthBtnContainer.childNodes[0];
+
+        const thirdRowTenthBtnContainer = getByTestId("thirdRowTenthBtnContainer");
+        const toggleTenthDottedNumberBtn = thirdRowTenthBtnContainer.childNodes[0];
+
+        fireEvent.click(toggleFirstDottedNumberBtn);
+        fireEvent.click(toggleSecondDottedNumberBtn);
+        fireEvent.click(toggleThirdDottedNumberBtn);
+        fireEvent.click(toggleFourthDottedNumberBtn);
+        fireEvent.click(toggleFifthDottedNumberBtn);
+        fireEvent.click(toggleSixthDottedNumberBtn);
+        fireEvent.click(toggleSeventhDottedNumberBtn);
+        fireEvent.click(toggleEighthDottedNumberBtn);
+        fireEvent.click(toggleNinthDottedNumberBtn);
+        fireEvent.click(toggleTenthDottedNumberBtn);
+        const outputSumThirdRow = getByTestId("outputSumThirdRow");
+        //when the dotted buttons are shown, the ThirdRowSum is incremented by 20
+        expect(outputSumThirdRow.textContent).toBe("20");
+        
+        fireEvent.click(toggleFirstDottedNumberBtn);
+        fireEvent.click(toggleSecondDottedNumberBtn);
+        fireEvent.click(toggleThirdDottedNumberBtn);
+        fireEvent.click(toggleFourthDottedNumberBtn);
+        fireEvent.click(toggleFifthDottedNumberBtn);
+        fireEvent.click(toggleSixthDottedNumberBtn);
+        fireEvent.click(toggleSeventhDottedNumberBtn);
+        fireEvent.click(toggleEighthDottedNumberBtn);
+        fireEvent.click(toggleNinthDottedNumberBtn);
+        fireEvent.click(toggleTenthDottedNumberBtn);
+        //when the dotted buttons are not shown(toggled), the ThirdRowSum is decremented by 20
+        expect(outputSumThirdRow.textContent).toBe("0");
+        
+    });
+
+    it('checks on clicking all ten number_buttons of FOURTH row, the fourthRowSum increments/decrements if number-dot shown/not-shown ',  ()=> {
+        const fourthRowFirstBtnContainer = getByTestId("fourthRowFirstBtnContainer");
+        const toggleFirstDottedNumberBtn = fourthRowFirstBtnContainer.childNodes[0];
+
+        const fourthRowSecondBtnContainer = getByTestId("fourthRowSecondBtnContainer");
+        const toggleSecondDottedNumberBtn = fourthRowSecondBtnContainer.childNodes[0];
+
+        const fourthRowThirdBtnContainer = getByTestId("fourthRowThirdBtnContainer");
+        const toggleThirdDottedNumberBtn = fourthRowThirdBtnContainer.childNodes[0];
+        
+        const fourthRowFourthBtnContainer = getByTestId("fourthRowFourthBtnContainer");
+        const toggleFourthDottedNumberBtn = fourthRowFourthBtnContainer.childNodes[0];
+
+        const fourthRowFifthBtnContainer = getByTestId("fourthRowFifthBtnContainer");
+        const toggleFifthDottedNumberBtn = fourthRowFifthBtnContainer.childNodes[0];
+
+        const fourthRowSixthBtnContainer = getByTestId("fourthRowSixthBtnContainer");
+        const toggleSixthDottedNumberBtn = fourthRowSixthBtnContainer.childNodes[0];
+
+        const fourthRowSeventhBtnContainer = getByTestId("fourthRowSeventhBtnContainer");
+        const toggleSeventhDottedNumberBtn = fourthRowSeventhBtnContainer.childNodes[0];
+
+        const fourthRowEighthBtnContainer = getByTestId("fourthRowEighthBtnContainer");
+        const toggleEighthDottedNumberBtn = fourthRowEighthBtnContainer.childNodes[0];
+
+        const fourthRowNinthBtnContainer = getByTestId("fourthRowNinthBtnContainer");
+        const toggleNinthDottedNumberBtn = fourthRowNinthBtnContainer.childNodes[0];
+
+        const fourthRowTenthBtnContainer = getByTestId("fourthRowTenthBtnContainer");
+        const toggleTenthDottedNumberBtn = fourthRowTenthBtnContainer.childNodes[0];
+
+        fireEvent.click(toggleFirstDottedNumberBtn);
+        fireEvent.click(toggleSecondDottedNumberBtn);
+        fireEvent.click(toggleThirdDottedNumberBtn);
+        fireEvent.click(toggleFourthDottedNumberBtn);
+        fireEvent.click(toggleFifthDottedNumberBtn);
+        fireEvent.click(toggleSixthDottedNumberBtn);
+        fireEvent.click(toggleSeventhDottedNumberBtn);
+        fireEvent.click(toggleEighthDottedNumberBtn);
+        fireEvent.click(toggleNinthDottedNumberBtn);
+        fireEvent.click(toggleTenthDottedNumberBtn);
+        const outputSumFourthRow = getByTestId("outputSumFourthRow");
+        //when the dotted buttons are shown, the FourthRowSum is incremented by 20
+        expect(outputSumFourthRow.textContent).toBe("20");
+        
+        fireEvent.click(toggleFirstDottedNumberBtn);
+        fireEvent.click(toggleSecondDottedNumberBtn);
+        fireEvent.click(toggleThirdDottedNumberBtn);
+        fireEvent.click(toggleFourthDottedNumberBtn);
+        fireEvent.click(toggleFifthDottedNumberBtn);
+        fireEvent.click(toggleSixthDottedNumberBtn);
+        fireEvent.click(toggleSeventhDottedNumberBtn);
+        fireEvent.click(toggleEighthDottedNumberBtn);
+        fireEvent.click(toggleNinthDottedNumberBtn);
+        fireEvent.click(toggleTenthDottedNumberBtn);
+        //when the dotted buttons are not shown(toggled), the FourthRowSum is decremented by 20
+        expect(outputSumFourthRow.textContent).toBe("0");
+        
+    });
+
 
 })

@@ -12,6 +12,10 @@ export default class App extends React.Component {
         correctFirstRowSum : 2,
         secondRowSum : 0,
         correctSecondRowSum : 4,
+        thirdRowSum : 0,
+        correctThirdRowSum: 6,
+        fourthRowSum : 0,
+        correctFourthRowSum: 8,
         checkResult : false,
     }
    
@@ -51,6 +55,32 @@ export default class App extends React.Component {
     decrementNumberCountSecondRow = () => { 
         this.setState( (prevState, props) => {
             return {secondRowSum : prevState.secondRowSum - 2};
+        })
+    }
+
+    incrementNumberCountThirdRow =() =>{ 
+        
+        this.setState( (prevState, props) => {
+            return {thirdRowSum : prevState.thirdRowSum + 2};
+        })
+    }
+
+    decrementNumberCountThirdRow = () => { 
+        this.setState( (prevState, props) => {
+            return {thirdRowSum : prevState.thirdRowSum - 2};
+        })
+    }
+
+    incrementNumberCountFourthRow =() =>{ 
+        
+        this.setState( (prevState, props) => {
+            return {fourthRowSum : prevState.fourthRowSum + 2};
+        })
+    }
+
+    decrementNumberCountFourthRow = () => { 
+        this.setState( (prevState, props) => {
+            return {fourthRowSum : prevState.fourthRowSum - 2};
         })
     }
 
@@ -128,6 +158,64 @@ export default class App extends React.Component {
                     <li className="table-li" data-testid="outputSumSecondRow" >{ this.state.secondRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.secondRowSum == this.state.correctSecondRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
+                </ul>
+
+                <ul className="table-ul" >
+                    <li className="table-li lot-times-number"><h3>3 * 2</h3></li>
+                    <li className="table-li" data-testid="thirdRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+                    <li className="table-li" data-testid="thirdRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+
+                    <li className="table-li" data-testid="thirdRowThirdBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+                    <li className="table-li" data-testid="thirdRowFourthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+                    <li className="table-li" data-testid="thirdRowFifthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+                    <li className="table-li" data-testid="thirdRowSixthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+                    <li className="table-li" data-testid="thirdRowSeventhBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+                    <li className="table-li" data-testid="thirdRowEighthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+                    <li className="table-li" data-testid="thirdRowNinthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+
+                    <li className="table-li" data-testid="thirdRowTenthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
+                    
+
+                    <li className="table-li" data-testid="outputSumThirdRow" >{ this.state.thirdRowSum }</li>
+
+                    <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.thirdRowSum == this.state.correctThirdRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
+                </ul>
+
+                <ul className="table-ul" >
+                    <li className="table-li lot-times-number"><h3>4 * 2</h3></li>
+                    <li className="table-li" data-testid="fourthRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+                    <li className="table-li" data-testid="fourthRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+
+                    <li className="table-li" data-testid="fourthRowThirdBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+                    <li className="table-li" data-testid="fourthRowFourthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+                    <li className="table-li" data-testid="fourthRowFifthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+                    <li className="table-li" data-testid="fourthRowSixthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+                    <li className="table-li" data-testid="fourthRowSeventhBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+                    <li className="table-li" data-testid="fourthRowEighthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+                    <li className="table-li" data-testid="fourthRowNinthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+
+                    <li className="table-li" data-testid="fourthRowTenthBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
+                    
+
+                    <li className="table-li" data-testid="outputSumFourthRow" >{ this.state.fourthRowSum }</li>
+
+                    <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.fourthRowSum == this.state.correctFourthRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
 
                  
