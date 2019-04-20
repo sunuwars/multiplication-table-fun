@@ -7,170 +7,182 @@ import IncorrectImg from "../../images/incorrect-img.svg";
 export default class Table extends React.Component {
     
     state = {
+        tableNumber : 0,
         totalNumber : 0,
         firstRowSum : 0,
-        correctFirstRowSum : 2,
+        correctFirstRowSum : 0,
         secondRowSum : 0,
-        correctSecondRowSum : 4,
+        correctSecondRowSum : 0,
         thirdRowSum : 0,
-        correctThirdRowSum: 6,
+        correctThirdRowSum: 0,
         fourthRowSum : 0,
-        correctFourthRowSum: 8,
+        correctFourthRowSum: 0,
         fifthRowSum : 0,
-        correctFifthRowSum: 10,
+        correctFifthRowSum: 0,
         sixthRowSum : 0,
-        correctSixthRowSum: 12,
+        correctSixthRowSum: 0,
         seventhRowSum : 0,
-        correctSeventhRowSum: 14,
+        correctSeventhRowSum: 0,
         eighthRowSum : 0,
-        correctEighthRowSum: 16,
+        correctEighthRowSum: 0,
         ninthRowSum : 0,
-        correctNinthRowSum: 18,
+        correctNinthRowSum: 0,
         tenthRowSum : 0,
-        correctTenthRowSum: 20,
+        correctTenthRowSum: 0,
         checkResult : false,
+    }
+
+    componentDidMount= () => {
+        this.setState( (prevState, props) => {
+            const {number} = this.props;
+            return { correctFirstRowSum : number *1, correctSecondRowSum : number * 2, correctThirdRowSum : number * 3,
+                    correctFourthRowSum : number * 4, correctFifthRowSum : number * 5, correctSixthRowSum : number * 6,
+                    correctSeventhRowSum : number * 7, correctEighthRowSum : number * 8, correctNinthRowSum : number * 9,
+                    correctTenthRowSum : number * 10, tableNumber : number}
+
+        })
     }
    
     incrementNumberCount =() =>{ console.log('hello')
         
         this.setState( (prevState, props) => {
-            return {totalNumber : prevState.totalNumber + 2};
+            return {totalNumber : prevState.totalNumber + prevState.tableNumber};
         })
     }
 
     decrementNumberCount = () => { // console.log('decrement')
         this.setState( (prevState, props) => {
-            return {totalNumber : prevState.totalNumber - 2};
+            return {totalNumber : prevState.totalNumber - prevState.tableNumber};
         })
     }
 
     incrementNumberCountFirstRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {firstRowSum : prevState.firstRowSum + 2};
+            return {firstRowSum : prevState.firstRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountFirstRow = () => { 
         this.setState( (prevState, props) => {
-            return {firstRowSum : prevState.firstRowSum - 2};
+            return {firstRowSum : prevState.firstRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountSecondRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {secondRowSum : prevState.secondRowSum + 2};
+            return {secondRowSum : prevState.secondRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountSecondRow = () => { 
         this.setState( (prevState, props) => {
-            return {secondRowSum : prevState.secondRowSum - 2};
+            return {secondRowSum : prevState.secondRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountThirdRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {thirdRowSum : prevState.thirdRowSum + 2};
+            return {thirdRowSum : prevState.thirdRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountThirdRow = () => { 
         this.setState( (prevState, props) => {
-            return {thirdRowSum : prevState.thirdRowSum - 2};
+            return {thirdRowSum : prevState.thirdRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountFourthRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {fourthRowSum : prevState.fourthRowSum + 2};
+            return {fourthRowSum : prevState.fourthRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountFourthRow = () => { 
         this.setState( (prevState, props) => {
-            return {fourthRowSum : prevState.fourthRowSum - 2};
+            return {fourthRowSum : prevState.fourthRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountFifthRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {fifthRowSum : prevState.fifthRowSum + 2};
+            return {fifthRowSum : prevState.fifthRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountFifthRow = () => { 
         this.setState( (prevState, props) => {
-            return {fifthRowSum : prevState.fifthRowSum - 2};
+            return {fifthRowSum : prevState.fifthRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountSixthRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {sixthRowSum : prevState.sixthRowSum + 2};
+            return {sixthRowSum : prevState.sixthRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountSixthRow = () => { 
         this.setState( (prevState, props) => {
-            return {sixthRowSum : prevState.sixthRowSum - 2};
+            return {sixthRowSum : prevState.sixthRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountSeventhRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {seventhRowSum : prevState.seventhRowSum + 2};
+            return {seventhRowSum : prevState.seventhRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountSeventhRow = () => { 
         this.setState( (prevState, props) => {
-            return {seventhRowSum : prevState.seventhRowSum - 2};
+            return {seventhRowSum : prevState.seventhRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountEighthRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {eighthRowSum : prevState.eighthRowSum + 2};
+            return {eighthRowSum : prevState.eighthRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountEighthRow = () => { 
         this.setState( (prevState, props) => {
-            return {eighthRowSum : prevState.eighthRowSum - 2};
+            return {eighthRowSum : prevState.eighthRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountNinthRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {ninthRowSum : prevState.ninthRowSum + 2};
+            return {ninthRowSum : prevState.ninthRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountNinthRow = () => { 
         this.setState( (prevState, props) => {
-            return {ninthRowSum : prevState.ninthRowSum - 2};
+            return {ninthRowSum : prevState.ninthRowSum - prevState.tableNumber};
         })
     }
 
     incrementNumberCountTenthRow =() =>{ 
         
         this.setState( (prevState, props) => {
-            return {tenthRowSum : prevState.tenthRowSum + 2};
+            return {tenthRowSum : prevState.tenthRowSum + prevState.tableNumber};
         })
     }
 
     decrementNumberCountTenthRow = () => { 
         this.setState( (prevState, props) => {
-            return {tenthRowSum : prevState.tenthRowSum - 2};
+            return {tenthRowSum : prevState.tenthRowSum - prevState.tableNumber};
         })
     }
 
@@ -186,10 +198,10 @@ export default class Table extends React.Component {
         // console.log(  "this.state.secondRowSum=" , this.state.secondRowSum);
         return (
             <React.Fragment>
-                <h1 className="table-heading">Two's table</h1>
+                <h1 className="table-heading">{this.state.tableNumber}'s table</h1>
                 <div id="table-div">
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>1 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>1 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="firstRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
 
                     <li className="table-li" data-testid="firstRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFirstRow} decrementNumberCount={this.decrementNumberCountFirstRow} /></li>
@@ -221,7 +233,7 @@ export default class Table extends React.Component {
                 </ul>
 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>2 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>2 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="secondRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountSecondRow} decrementNumberCount={this.decrementNumberCountSecondRow} /></li>
 
                     <li className="table-li" data-testid="secondRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountSecondRow} decrementNumberCount={this.decrementNumberCountSecondRow} /></li>
@@ -252,7 +264,7 @@ export default class Table extends React.Component {
                 </ul>
 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>3 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>3 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="thirdRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
 
                     <li className="table-li" data-testid="thirdRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
@@ -281,7 +293,7 @@ export default class Table extends React.Component {
                 </ul>
 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>4 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>4 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="fourthRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
 
                     <li className="table-li" data-testid="fourthRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
@@ -310,7 +322,7 @@ export default class Table extends React.Component {
                 </ul>
 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>5 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>5 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="fifthRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFifthRow} decrementNumberCount={this.decrementNumberCountFifthRow} /></li>
 
                     <li className="table-li" data-testid="fifthRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountFifthRow} decrementNumberCount={this.decrementNumberCountFifthRow} /></li>
@@ -339,7 +351,7 @@ export default class Table extends React.Component {
                 </ul>
 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>6 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>6 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="sixthRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountSixthRow} decrementNumberCount={this.decrementNumberCountSixthRow} /></li>
 
                     <li className="table-li" data-testid="sixthRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountSixthRow} decrementNumberCount={this.decrementNumberCountSixthRow} /></li>
@@ -368,7 +380,7 @@ export default class Table extends React.Component {
                 </ul>
 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>7 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>7 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="seventhRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountSeventhRow} decrementNumberCount={this.decrementNumberCountSeventhRow} /></li>
 
                     <li className="table-li" data-testid="seventhRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountSeventhRow} decrementNumberCount={this.decrementNumberCountSeventhRow} /></li>
@@ -397,7 +409,7 @@ export default class Table extends React.Component {
                 </ul>
 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>8 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>8 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="eighthRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountEighthRow} decrementNumberCount={this.decrementNumberCountEighthRow} /></li>
 
                     <li className="table-li" data-testid="eighthRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountEighthRow} decrementNumberCount={this.decrementNumberCountEighthRow} /></li>
@@ -426,7 +438,7 @@ export default class Table extends React.Component {
                 </ul>
 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>9 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>9 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="ninthRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountNinthRow} decrementNumberCount={this.decrementNumberCountNinthRow} /></li>
 
                     <li className="table-li" data-testid="ninthRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountNinthRow} decrementNumberCount={this.decrementNumberCountNinthRow} /></li>
@@ -455,7 +467,7 @@ export default class Table extends React.Component {
                 </ul>
                 
                 <ul className="table-ul" >
-                    <li className="table-li lot-times-number"><h3>10 * 2</h3></li>
+                    <li className="table-li lot-times-number"><h3>10 * {this.state.tableNumber}</h3></li>
                     <li className="table-li" data-testid="tenthRowFirstBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountTenthRow} decrementNumberCount={this.decrementNumberCountTenthRow} /></li>
 
                     <li className="table-li" data-testid="tenthRowSecondBtnContainer" ><NumberBtn incrementNumberCount={this.incrementNumberCountTenthRow} decrementNumberCount={this.decrementNumberCountTenthRow} /></li>

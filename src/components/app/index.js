@@ -25,9 +25,9 @@ export default class App extends React.Component {
                 <button id="tableNumber" onClick={this.numberSelected.bind(this, 3)}>3s table</button> 
                 </div>) }
 
-                {this.state.number === 2 && (<Table/>)} 
+                {this.state.number === 2 && (<Table number={this.state.number} />)} 
 
-                {this.state.number === 3 && (<h2>hello world 3</h2>)}
+                {this.state.number === 3 && (<Table number={this.state.number} />)} 
             </div>
             
         )
