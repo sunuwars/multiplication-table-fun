@@ -6,7 +6,7 @@ import Table from "./index";
 // afterEach(cleanup);
 
 describe('multiplication table integration test works', ()=> {
-    const {getByText, container, getByLabelText, getByTestId} = render(<Table/>);
+    const {getByText, container, getByLabelText, getByTestId} = render(<Table number={2} />);
     
     it("test jest is working", ()=> {
         expect(true).toBeTruthy();
