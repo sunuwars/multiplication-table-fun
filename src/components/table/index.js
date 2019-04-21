@@ -205,6 +205,9 @@ export default class Table extends React.Component {
         // console.log(  "this.state.secondRowSum=" , this.state.secondRowSum);
         return (
             <React.Fragment>
+
+                <button id="check-result-btn" onClick={this.checkResultFunc}>{this.state.checkResult ? "hide checking" : "check result" } </button>
+
                 <h1 className="table-heading">{this.state.tableNumber}'s table</h1>
                 <div id="table-div">
                 <ul className="table-ul" >
@@ -504,7 +507,9 @@ export default class Table extends React.Component {
                 
                  
                 </div>
-                <button onClick={this.checkResultFunc}>{this.state.checkResult ? "hide checking" : "check result" } </button>
+
+                 
+                
             </React.Fragment>
         )
     }

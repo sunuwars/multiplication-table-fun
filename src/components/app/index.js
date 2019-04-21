@@ -53,7 +53,7 @@ export default class App extends React.Component {
                 </React.Fragment>) }
 
                 {this.state.number !== 0 && (
-                    <button id="homeBtn" onClick={this.home}> home </button>
+                    <button id="home-btn" onClick={this.home}> home </button>
                 )}
 
                 {this.state.number === 1 && (<Table number={this.state.number} />)} 

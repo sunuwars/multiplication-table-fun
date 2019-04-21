@@ -48,3 +48,15 @@ body{
   .lot-times-number h3{
       margin: .5em;
   }  
+
+  #home-btn {
+      width : 150px;
+      height : 40px;
+      float : left;
+  }
+
+  #check-result-btn{
+      width : 150px;
+      height : 40px;
+      float : right;
+  }
