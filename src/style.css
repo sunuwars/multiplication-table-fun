@@ -37,6 +37,7 @@ body{
 }
 
 .number-dot-btn-container{
+    width : 100%;
     display:flex;
     justify-content: center;
 }

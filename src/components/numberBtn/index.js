@@ -94,10 +94,10 @@ export default class NumberBtn extends React.Component{
         // console.log('this.state.countMeNumber=',this.state.countMeNumber);
 
         return (
-            // <div className="number-dot-btn-container" >
-                <img data-testid="dottedImgBtn" src={this.state.showNumberDots? require(this.state.numberDotsImg) : emptyNumberBtn} onClick={this.toggle} ></img>
+            <div className="number-dot-btn-container" onClick={this.toggle} >
+                <img data-testid="dottedImgBtn" src={this.state.showNumberDots? require(this.state.numberDotsImg) : emptyNumberBtn} ></img>
 
-            // </div>
+             </div>
         )
     }
 }
