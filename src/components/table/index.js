@@ -236,7 +236,7 @@ export default class Table extends React.Component {
 
                     {/* <li className="table-li" data-testid="outputSumFirstRow" >{ this.state.checkResult ?this.state.firstRowSum : ""}</li> */}
 
-                    <li className="table-li" data-testid="outputSumFirstRow" >{ this.state.firstRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumFirstRow" >{ this.state.firstRowSum }</li>
                     {/* if checkResult button is clicked(we want to check result), check if firstRowSum == correctFirstRowSum (if true, display correctImg, tick-image, else display IncorrectImg or exclamation-mark-image),
                     else if checkResult button is not clicked img-src= "" */}
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.firstRowSum == this.state.correctFirstRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
@@ -268,7 +268,7 @@ export default class Table extends React.Component {
 
                     {/* <li className="table-li" data-testid="outputSumsecondRow" >{ this.state.checkResult ?this.state.secondRowSum : ""}</li> */}
 
-                    <li className="table-li" data-testid="outputSumSecondRow" >{ this.state.secondRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumSecondRow" >{ this.state.secondRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.secondRowSum == this.state.correctSecondRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
@@ -297,7 +297,7 @@ export default class Table extends React.Component {
                     <li className="table-li" data-testid="thirdRowTenthBtnContainer" ><NumberBtn number={this.state.tableNumber} incrementNumberCount={this.incrementNumberCountThirdRow} decrementNumberCount={this.decrementNumberCountThirdRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumThirdRow" >{ this.state.thirdRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumThirdRow" >{ this.state.thirdRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.thirdRowSum == this.state.correctThirdRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
@@ -326,7 +326,7 @@ export default class Table extends React.Component {
                     <li className="table-li" data-testid="fourthRowTenthBtnContainer" ><NumberBtn number={this.state.tableNumber}  incrementNumberCount={this.incrementNumberCountFourthRow} decrementNumberCount={this.decrementNumberCountFourthRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumFourthRow" >{ this.state.fourthRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumFourthRow" >{ this.state.fourthRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.fourthRowSum == this.state.correctFourthRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
@@ -355,7 +355,7 @@ export default class Table extends React.Component {
                     <li className="table-li" data-testid="fifthRowTenthBtnContainer" ><NumberBtn number={this.state.tableNumber}  incrementNumberCount={this.incrementNumberCountFifthRow} decrementNumberCount={this.decrementNumberCountFifthRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumFifthRow" >{ this.state.fifthRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumFifthRow" >{ this.state.fifthRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.fifthRowSum == this.state.correctFifthRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
@@ -384,7 +384,7 @@ export default class Table extends React.Component {
                     <li className="table-li" data-testid="sixthRowTenthBtnContainer" ><NumberBtn number={this.state.tableNumber}  incrementNumberCount={this.incrementNumberCountSixthRow} decrementNumberCount={this.decrementNumberCountSixthRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumSixthRow" >{ this.state.sixthRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumSixthRow" >{ this.state.sixthRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.sixthRowSum == this.state.correctSixthRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
@@ -413,7 +413,7 @@ export default class Table extends React.Component {
                     <li className="table-li" data-testid="seventhRowTenthBtnContainer" ><NumberBtn number={this.state.tableNumber}  incrementNumberCount={this.incrementNumberCountSeventhRow} decrementNumberCount={this.decrementNumberCountSeventhRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumSeventhRow" >{ this.state.seventhRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumSeventhRow" >{ this.state.seventhRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.seventhRowSum == this.state.correctSeventhRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
@@ -442,7 +442,7 @@ export default class Table extends React.Component {
                     <li className="table-li" data-testid="eighthRowTenthBtnContainer" ><NumberBtn number={this.state.tableNumber}  incrementNumberCount={this.incrementNumberCountEighthRow} decrementNumberCount={this.decrementNumberCountEighthRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumEighthRow" >{ this.state.eighthRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumEighthRow" >{ this.state.eighthRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.eighthRowSum == this.state.correctEighthRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
@@ -471,7 +471,7 @@ export default class Table extends React.Component {
                     <li className="table-li" data-testid="ninthRowTenthBtnContainer" ><NumberBtn number={this.state.tableNumber}  incrementNumberCount={this.incrementNumberCountNinthRow} decrementNumberCount={this.decrementNumberCountNinthRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumNinthRow" >{ this.state.ninthRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumNinthRow" >{ this.state.ninthRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.ninthRowSum == this.state.correctNinthRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
@@ -500,7 +500,7 @@ export default class Table extends React.Component {
                     <li className="table-li" data-testid="tenthRowTenthBtnContainer" ><NumberBtn number={this.state.tableNumber}  incrementNumberCount={this.incrementNumberCountTenthRow} decrementNumberCount={this.decrementNumberCountTenthRow} /></li>
                     
 
-                    <li className="table-li" data-testid="outputSumTenthRow" >{ this.state.tenthRowSum }</li>
+                    <li className="table-li product" data-testid="outputSumTenthRow" >{ this.state.tenthRowSum }</li>
 
                     <li className="table-li" data-testid="correctIncorrectImg" ><img src={ this.state.checkResult ? this.state.tenthRowSum == this.state.correctTenthRowSum ? CorrectImg: IncorrectImg  : ""} /></li>
                 </ul>
