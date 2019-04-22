@@ -34,17 +34,20 @@ body{
     height:5vh;
     display:flex;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .number-dot-btn-container{
     width : 100%;
+    height : 100%;
     display:flex;
     justify-content: center;
 }
 
-.lot-times-number{
+/* .lot-times-number{
     text-align: center;
-  }
+  } */
 
   .lot-times-number h3{
       margin: .5em;
