@@ -7,7 +7,8 @@
     "test": "jest ",
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "btn-test": "jest src/components/numberBtn"
+    "btn-test": "jest src/components/numberBtn",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
