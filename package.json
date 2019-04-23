@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest ",
     "start": "parcel src/index.html",
-    "build": "parcel buid src/index.html",
+    "build": "parcel build src/index.html",
     "btn-test": "jest src/components/numberBtn"
   },
   "repository": {
@@ -43,5 +43,8 @@
       "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
     }
+  },
+  "engines": {
+    "node":"11.5.0"
   }
 }
